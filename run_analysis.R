@@ -36,7 +36,7 @@ write.table(x,"data/subset.txt", row.names=FALSE, col.names=FALSE )
 # 3) Uses descriptive activity names to name the activities in the data set
 x <-read.table("data/subset.txt" )
 y <- read.table("data/activity_labels.txt" )
-z<-merge(x,y,by.x="V1.2",by.y="V1", sort= FALSE)
+z<-merge(x,y,by.x="V74",by.y="V1", sort= FALSE)
 z <- select(z,c(2:75))
 
 # 4) Appropriately labels the data set with descriptive variable names. 
