@@ -53,9 +53,9 @@ write.table(z,"data/subset.txt", row.names=FALSE, col.names=TRUE )
 # 5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable 
 #   for each activity and each subject.
 
-ids = c("Subject", "Activity")
-labels = setdiff(colnames(z), ids)
-x = melt(z, id = ids, measure.vars = labels)
-y = dcast(x, Subject + Activity ~ variable, mean)
+ids <- c("Subject", "Activity")
+labels <- setdiff(colnames(z), ids)
+x <- melt(z, id = ids, measure.vars = labels)
+y <- dcast(x, Subject + Activity ~ variable, mean)
 write.table(y, "data/tidy.txt", row.names=FALSE, col.names=TRUE)
 
